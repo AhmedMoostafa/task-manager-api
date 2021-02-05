@@ -10,6 +10,9 @@ app.use(express.json());
 app.use(taskRouter);
 app.use(userRouter);
 
+app.get('*',(req,res)=>{
+  res.send({error:"not found"})
+})
 app.listen(port, () => {
     console.log("server started at port " + port);
   });
