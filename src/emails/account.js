@@ -8,8 +8,8 @@ const sendWelcomeEmail=(email,name)=>{
             name:'taske manager',
             email:'ahmed.moahmed442@gmail.com'
         },
-        subject:'hi '+name,
-        text:'welcome to task manager app, '+name+' thanks for using it',
+        subject:'created new account',
+        text:'welcome '+name+' to task manager app,thanks for using it',
     })
        
 }
@@ -20,7 +20,7 @@ const cancelEmail=(email,name)=>{
             name:'taske manager',
             email:'ahmed.moahmed442@gmail.com'
         },
-        subject:'hi '+name,
+        subject:'account is canceld',
         text:'your acoount'+email+' are canceld,  thanks for using it',
     })
        
