@@ -20,12 +20,13 @@ const avatar = multer({
 router.post("/users", async (req, res) => {
   const user = new User(req.body);
   try {
+    const user = new User(req.body);
     await user.save();
     await  sendWelcomeEmail(user.email,user.name)
     const token = await user.generateToken();
     res.status(201).send({ user, token });
   } catch (e) {
-    res.status(400).send(e);
+    res.status(400).send({error:'already exist'}); 
   }
 });
 router.get("/users", auth, async (req, res) => {
