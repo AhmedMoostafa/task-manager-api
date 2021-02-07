@@ -49,7 +49,7 @@ router.get("/users/:id", async (req, res) => {
     res.status(404).send(e);
   }
 });
-router.patch("/users/me", auth, async (req, res) => {
+router.patch('/users/me', auth, async (req, res) => {
   const updates = Object.keys(req.body); //convert the object to array
   const allowedToUpadte = ["name", "age", "email", "password"];
   const valid = updates.every((value) => allowedToUpadte.includes(value));
